@@ -10,7 +10,8 @@ jobs:
     release_desktop:
         strategy:
             matrix:
-                platform: [ windows-latest, ubuntu-latest]
+                platform: [ windows-latest, ubuntu-latest, macos-latest]
+                # Uncomment the line below if you also want to build for macOS 13
                 # platform: [ windows-latest, ubuntu-latest, macos-latest, macos-13]
         runs-on: ${{ matrix.platform }}
         steps:
